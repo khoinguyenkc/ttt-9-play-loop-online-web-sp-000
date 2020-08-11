@@ -48,6 +48,10 @@ def play(board)
     turn(board)
 
     boardnotfull = (board.include?(" ") || board.include?(""))
+    #variable must be inside so that e4very loop re calculate the value of boardisfull
+    # otherwie it's static
+    #crucial
+
     if !boardnotfull
       break
     end
